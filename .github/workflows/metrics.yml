@@ -1,5 +1,4 @@
 # Visit https://github.com/lowlighter/metrics#-documentation for full reference
-# Visit https://github.com/lowlighter/metrics#-documentation for full reference
 name: Metrics
 on:
   # Schedule updates (everyday at 05:25:00)
@@ -37,9 +36,8 @@ jobs:
           plugin_languages_analysis_timeout_repositories: 7.5
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
-          plugin_languages_ignored: yaml, toml, html
-          plugin_languages_limit: 8
-          plugin_languages_other: yes
+          plugin_languages_ignored: yaml, toml, html, css, nginx, markdown
+          plugin_languages_limit: 5
           plugin_languages_recent_categories: markup, programming
           plugin_languages_recent_days: 14
           plugin_languages_recent_load: 300

@@ -41,7 +41,6 @@ jobs:
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
           plugin_languages_ignored: yaml, toml, html, css, nginx, markdown, dockerfile
-          plugin_languages_indepth: yes
           plugin_languages_limit: 8
           plugin_languages_other: yes
           plugin_languages_recent_categories: markup, programming

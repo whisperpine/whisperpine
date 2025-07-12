@@ -1,11 +1,13 @@
 # Visit https://github.com/lowlighter/metrics#-documentation for full reference
 name: Metrics
 on:
-  # Schedule updates (everyday at 05:25:00)
-  schedule: [{ cron: "25 5 * * *" }]
+  # Schedule updates (everyday at 23:25:00)
+  schedule:
+    - cron: "25 23 * * *"
   # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
-  push: { branches: ["main"] }
+  push:
+    branches: ["main"]
 jobs:
   github-metrics:
     runs-on: ubuntu-latest

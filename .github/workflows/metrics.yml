@@ -11,6 +11,9 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    environment:
+      name: user-profile
+      url: https://github.com/${{ github.repository_owner }}
     permissions:
       contents: write
     steps:

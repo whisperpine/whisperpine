@@ -8,14 +8,22 @@ on:
   workflow_dispatch:
   push:
     branches: ["main"]
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   github-metrics:
+    name: update github metrics
     runs-on: ubuntu-latest
     environment:
       name: user-profile
       url: https://github.com/${{ github.repository_owner }}
     permissions:
-      contents: write
+      contents: write # required to commit the generated metrics
     steps:
       - uses: lowlighter/metrics@latest
         with:
